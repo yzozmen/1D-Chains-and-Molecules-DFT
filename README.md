@@ -75,6 +75,21 @@ The preserved project results give a calculated cohesive energy of:
 **E_coh = -18.538 eV**
 
 
+### O₃
+
+#### Molecular Geometry
+
+The molecular geometry of ozone (O₃) was investigated using VASP and visualized using VESTA.
+
+![O3 geometry](figures/molecules/o3/o3_geometry.png)
+
+The optimized structure was compared with reference molecular-geometry data reported in the original project presentation.
+
+Reference values used for comparison:
+
+- O-O bond length: approximately 1.278 Å
+- O-O-O bond angle: approximately 116.80°
+
 
 ## Data Availability
 
