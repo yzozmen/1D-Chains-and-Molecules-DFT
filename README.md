@@ -83,12 +83,82 @@ The molecular geometry of ozone (O₃) was investigated using VASP and visualize
 
 ![O3 geometry](figures/molecules/o3/o3_geometry.png)
 
-The optimized structure was compared with reference molecular-geometry data reported in the original project presentation.
+The optimized structure was compared with reference molecular-geometry values.
 
 Reference values used for comparison:
 
 - O-O bond length: approximately 1.278 Å
 - O-O-O bond angle: approximately 116.80°
+
+## 1D Carbon Chain
+
+### Overview
+
+A one-dimensional linear carbon chain was investigated using Density Functional Theory (DFT) calculations with VASP. Convergence tests were performed to determine suitable computational parameters before structural analysis.
+
+### ENCUT Convergence
+
+The plane-wave cutoff energy was tested to ensure convergence of the calculated total energy.
+
+![Carbon chain ENCUT convergence](figures/chains/carbon/carbon_chain_encut_test.png)
+
+The total energy approaches a stable value as the cutoff energy is increased. Based on the convergence behavior, the selected cutoff energy was:
+
+**ENCUT = 500 eV**
+
+### K-Point Convergence
+
+Since the system is periodic along the chain direction, k-point convergence was tested using meshes of the form **1 × 1 × k<sub>z</sub>**.
+
+![Carbon chain k-point convergence](figures/chains/carbon/carbon_chain_kpoints_test.png)
+
+The selected k-point mesh was:
+
+**1 × 1 × 7**
+
+### Vacuum Convergence
+
+A vacuum convergence test was performed to reduce interactions between periodic images of the one-dimensional carbon chain.
+
+![Carbon chain vacuum convergence](figures/chains/carbon/carbon_chain_vacuum_test.png)
+
+### Lattice Constant Optimization
+
+The equilibrium lattice constant was determined by calculating the total energy for different lattice parameters.
+
+![Carbon chain lattice scan](figures/chains/carbon/carbon_chain_lattice_scan.png)
+
+The minimum total energy was obtained at:
+
+**a = 1.28 Å**
+
+with:
+
+**E = -8.25788870 eV**
+
+### Optimized Geometry
+
+The optimized linear carbon-chain structure was analyzed using VESTA.
+
+![Carbon chain geometry](figures/chains/carbon/carbon_chain_geometry.png)
+
+### Calculated Properties
+
+| Property                     | Calculated Value |
+| ---------------------------- | ---------------: |
+| Equilibrium lattice constant |           1.28 Å |
+| C-C bond length              |         1.2830 Å |
+| Minimum total energy         |   -8.25788870 eV |
+| Cohesive energy              | 7.001464 eV/atom |
+
+The calculated C-C bond length is consistent with the approximately 1.28 Å value reported for linear carbon chains.
+
+### Reference
+
+Durgun, E., Dag, S., Bagci, V. M. K., Gulseren, O., Yildirim, T., & Ciraci, S.
+*Spintronic properties of carbon-based one-dimensional atomic chains.*
+Physical Review B, 74, 235413 (2006).
+
 
 
 ## Data Availability
